@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "OTR Notification Beep",
+  "version": "1.0",
+  "description": "Plays a beep when .o_notification_counter increases while tab is unfocused on otrlistens.net.",
+  "content_scripts": [
+    {
+      "matches": ["https://otrlistens.net/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [],
+  "web_accessible_resources": [
+    {
+      "resources": ["message.mp3"],
+      "matches": ["https://otrlistens.net/*"]
+    }
+  ]
+} 
